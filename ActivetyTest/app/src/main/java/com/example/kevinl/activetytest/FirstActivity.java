@@ -45,23 +45,23 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button_2);
+    Button button2 = (Button) findViewById(R.id.button_2);
         button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                finish();
-            }
-        });
+        @Override
+        public void onClick(View v){
+            finish();
+        }
+    });
 
-        Button button5 = (Button) findViewById(R.id.button_5);
+    Button button5 = (Button) findViewById(R.id.button_5);
         button5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent1 = new Intent(Intent.ACTION_VIEW);
-                intent1.setData(Uri.parse("http://www.baidu.com"));
-                startActivity(intent1);
-            }
-        });
+        @Override
+        public void onClick(View v){
+            Intent intent1 = new Intent(Intent.ACTION_VIEW);
+            intent1.setData(Uri.parse("http://www.baidu.com"));
+            startActivity(intent1);
+        }
+    });
 
-    }
+}
 }

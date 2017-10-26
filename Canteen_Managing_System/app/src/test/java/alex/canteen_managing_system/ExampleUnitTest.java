@@ -1,4 +1,4 @@
-package com.example.machenike.canteen_managing_system;
+package alex.canteen_managing_system;
 
 import org.junit.Test;
 

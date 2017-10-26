@@ -1,4 +1,4 @@
-package com.example.machenike.canteen_managing_system;
+package alex.canteen_managing_system;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.machenike.canteen_managing_system", appContext.getPackageName());
+        assertEquals("alex.canteen_managing_system", appContext.getPackageName());
     }
 }
