@@ -341,8 +341,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 switch (success){
                     case OK:
-                        Intent intent = new Intent(LoginActivity.this,CustomMainUI.class);
-                        startActivity(intent);
+                            if("custom".equals(mUserName)){
+                                Intent intent = new Intent(LoginActivity.this,CustomMainUI.class);
+                                startActivity(intent);
+                            }
+                            else if("employee".equals(mUserName)){
+                                Intent intent1 = new Intent(LoginActivity.this,EmployeeMainUI.class);
+                                startActivity(intent1);
+                            }
+                            else if("manager".equals(mUserName)){
+                                Intent intent2 = new Intent(LoginActivity.this,ManagerMainUI.class);
+                                startActivity(intent2);
+                            }
                         break;
                     case NoUser:
                         mUserNameView.setError(getString(R.string.error_incorrect_username));

@@ -1,8 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="alex.canteen_managing_system.CustomMainUI">
+    tools:context="alex.canteen_managing_system.EmployeeMainUI">
 
+
+    <item
+        android:id="@+id/action_viewrank"
+        android:orderInCategory="100"
+        android:title="ViewRank"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_settings"

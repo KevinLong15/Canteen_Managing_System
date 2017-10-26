@@ -26,7 +26,9 @@
         <activity
             android:name=".CustomMainUI"
             android:label="@string/title_activity_custom_main_ui"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EmployeeMainUI" />
+        <activity android:name=".ManagerMainUI"></activity>
     </application>
 
 </manifest>
