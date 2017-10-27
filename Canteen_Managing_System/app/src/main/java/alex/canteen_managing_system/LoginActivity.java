@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "customer:111111", "employee:222222", "manager:333333"
+            "customer:111", "employee:222", "manager:333"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -341,15 +341,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 switch (success){
                     case OK:
-                            if("customer".equals(mUserName)){
+                            if("customer".equals(mUserName.substring(0,8))){
                                 Intent intent = new Intent(LoginActivity.this,CustomerMainUI.class);
                                 startActivity(intent);
                             }
-                            else if("employee".equals(mUserName)){
+                            if("employee".equals(mUserName.substring(0,8))){
                                 Intent intent1 = new Intent(LoginActivity.this,EmployeeMainUI.class);
                                 startActivity(intent1);
                             }
-                            else if("manager".equals(mUserName)){
+                            if("manager".equals(mUserName.substring(0,7))){
                                 Intent intent2 = new Intent(LoginActivity.this,ManagerMainUI.class);
                                 startActivity(intent2);
                             }

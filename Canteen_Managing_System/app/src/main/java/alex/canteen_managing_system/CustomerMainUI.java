@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CustomerMainUI extends AppCompatActivity {
 
@@ -31,6 +33,26 @@ public class CustomerMainUI extends AppCompatActivity {
         }
 
     };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_custom_main_ui, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_settings:
+                Toast.makeText(this, "settings waited to be added", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_logout:
+                Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();
+                finish();
+                break;
+            default:
+        }
+        return true;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
