@@ -342,7 +342,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 switch (success){
                     case OK:
                             if("custom".equals(mUserName)){
-                                Intent intent = new Intent(LoginActivity.this,CustomerMainUI.class);
+                                Intent intent = new Intent(LoginActivity.this,CustomMainUI.class);
                                 startActivity(intent);
                             }
                             else if("employee".equals(mUserName)){
