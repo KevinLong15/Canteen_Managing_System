@@ -12,7 +12,7 @@ public class ManagerMainUI extends AppCompatActivity {
     //function logout completed in 2017.10.26
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_customer, menu);
+        getMenuInflater().inflate(R.menu.menu_custom_main_ui, menu);
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item){
