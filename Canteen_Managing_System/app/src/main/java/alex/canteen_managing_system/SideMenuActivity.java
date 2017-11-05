@@ -1,5 +1,6 @@
 package alex.canteen_managing_system;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class SideMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -82,16 +84,22 @@ public class SideMenuActivity extends AppCompatActivity
 
         if (id == R.id.nav_1) {
             // Handle Set Dishes
+            Intent intent3 = new Intent(SideMenuActivity.this,DishListActivity.class);
+            startActivity(intent3);
         } else if (id == R.id.nav_2) {
-            // Handle Set Dishes
+            // Handle Deal Orders
         } else if (id == R.id.nav_3) {
-            // Handle Set Dishes
+            // Handle Report Sales
         } else if (id == R.id.nav_4) {
-            // Handle Set Dishes
+            // Handle View Rank
+            Intent intent4 = new Intent(SideMenuActivity.this,RankListActivity.class);
+            startActivity(intent4);
         } else if (id == R.id.nav_5) {
-
+            //Handle View Evaluations
         } else if (id == R.id.nav_6) {
-
+            //Handle Logout
+            Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

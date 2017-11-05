@@ -1,5 +1,6 @@
 package alex.canteen_managing_system;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
