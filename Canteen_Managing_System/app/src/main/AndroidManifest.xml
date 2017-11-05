@@ -23,11 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmployeeMainUI" />
-        <activity android:name=".ManagerMainUI" />
         <activity
-            android:name=".CustomerMainUI"
-            android:label="@string/title_activity_customer_main_ui"></activity>
+            android:name=".CustomMainUI"
+            android:label="@string/title_activity_custom_main_ui"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EmployeeMainUI" />
+        <activity android:name=".ManagerMainUI"></activity>
     </application>
 
 </manifest>
