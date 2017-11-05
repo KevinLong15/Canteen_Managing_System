@@ -27,7 +27,11 @@
         <activity android:name=".ManagerMainUI" />
         <activity
             android:name=".CustomerMainUI"
-            android:label="@string/title_activity_customer_main_ui"></activity>
+            android:label="@string/title_activity_customer_main_ui" />
+        <activity
+            android:name=".SideMenuActivity"
+            android:label="@string/title_activity_side_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

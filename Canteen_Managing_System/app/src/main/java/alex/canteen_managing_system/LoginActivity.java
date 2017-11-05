@@ -346,7 +346,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                 startActivity(intent);
                             }
                             if("employee".equals(mUserName.substring(0,8))){
-                                Intent intent1 = new Intent(LoginActivity.this,EmployeeMainUI.class);
+                                Intent intent1 = new Intent(LoginActivity.this,SideMenuActivity.class);
                                 startActivity(intent1);
                             }
                             if("manager".equals(mUserName.substring(0,7))){
