@@ -88,14 +88,20 @@ public class SideMenuActivity extends AppCompatActivity
             startActivity(intent3);
         } else if (id == R.id.nav_2) {
             // Handle Deal Orders
+            Intent intent_deal_order = new Intent(SideMenuActivity.this,OrderListActivity.class);
+            startActivity(intent_deal_order);
         } else if (id == R.id.nav_3) {
             // Handle Report Sales
+            Intent intent_report_sales = new Intent(SideMenuActivity.this,ReportSalesActivity.class);
+            startActivity(intent_report_sales);
         } else if (id == R.id.nav_4) {
             // Handle View Rank
             Intent intent4 = new Intent(SideMenuActivity.this,RankListActivity.class);
             startActivity(intent4);
         } else if (id == R.id.nav_5) {
             //Handle View Evaluations
+            Intent intent_view_evaluations = new Intent(SideMenuActivity.this,ViewEvaluationsActivity.class);
+            startActivity(intent_view_evaluations);
         } else if (id == R.id.nav_6) {
             //Handle Logout
             Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();

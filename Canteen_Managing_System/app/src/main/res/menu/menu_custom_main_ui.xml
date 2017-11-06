@@ -5,9 +5,21 @@
 
 
     <item
+        android:id="@+id/action_order"
+        android:orderInCategory="100"
+        android:title="Order meals"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_evaluate"
+        android:orderInCategory="100"
+        android:title="Evaluate"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Setting"
         app:showAsAction="never" />
 
     <item

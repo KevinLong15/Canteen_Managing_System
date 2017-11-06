@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_1"
-            android:icon="@drawable/ic_menu_camera"
+
             android:title="Set Dishes" />
         <item
             android:id="@+id/nav_2"
-            android:icon="@drawable/ic_menu_gallery"
+
             android:title="Deal Orders" />
         <item
             android:id="@+id/nav_3"
-            android:icon="@drawable/ic_menu_slideshow"
+
             android:title="Report Sales" />
         <item
             android:id="@+id/nav_4"
-            android:icon="@drawable/ic_menu_manage"
+
             android:title="View Rank" />
     </group>
 
@@ -24,13 +24,20 @@
         <menu>
             <item
                 android:id="@+id/nav_5"
-                android:icon="@drawable/ic_menu_share"
+
                 android:title="View Evaluations" />
             <item
                 android:id="@+id/nav_6"
-                android:icon="@drawable/ic_menu_send"
+
                 android:title="Logout" />
         </menu>
     </item>
 
 </menu>
+
+    <!--android:icon="@drawable/ic_menu_camera"
+        android:icon="@drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:icon="@drawable/ic_menu_manage"
+        android:icon="@drawable/ic_menu_share"
+        android:icon="@drawable/ic_menu_send"-->
