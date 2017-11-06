@@ -13,9 +13,9 @@ public class RankListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rank_list);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(RankListActivity.this,android.R.layout.simple_list_item_1,rank_data);
+        setContentView(R.layout.activity_ranklist);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(RankListActivity.this,android.R.layout.simple_list_item_1,rank_data);
         ListView listView = (ListView) findViewById(R.id.list_rank);
-        listView.setAdapter(adapter1);
+        listView.setAdapter(adapter);
     }
 }

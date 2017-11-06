@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -59,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "customer:111", "employee:222", "manager:333"
+            "customer:111", "employee:222", "manager1:333"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -349,7 +350,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                 Intent intent1 = new Intent(LoginActivity.this,SideMenuActivity.class);
                                 startActivity(intent1);
                             }
-                            if("manager".equals(mUserName.substring(0,7))){
+                            if("manager1".equals(mUserName.substring(0,8))){
                                 Intent intent2 = new Intent(LoginActivity.this,ManagerMainUI.class);
                                 startActivity(intent2);
                             }
