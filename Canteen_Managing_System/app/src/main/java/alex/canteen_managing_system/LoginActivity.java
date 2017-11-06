@@ -3,6 +3,7 @@ package alex.canteen_managing_system;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -31,8 +32,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import alex.canteen_managing_system.Data.DishesDataInput;
+import alex.canteen_managing_system.Data.DishesDataOutput;
+import alex.canteen_managing_system.Dish.Dish;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -77,6 +91,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         // Set up the login form.
         mUserNameView = (AutoCompleteTextView) findViewById(R.id.user_name);
         populateAutoComplete();
@@ -97,6 +112,86 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mUserNameSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                DishesDataOutput d = new DishesDataOutput();
+                ArrayList<Dish> dishes = new ArrayList<Dish>();
+                dishes.add(new Dish("红烧肉","肉类",6));
+                dishes.add(new Dish("大便","菌类",1));
+               // d.Save(dishes);
+
+                FileOutputStream out =null;
+                BufferedWriter writer =null;
+                try{
+                    out = openFileOutput("DishesData.txt",Context.MODE_PRIVATE);
+                    writer = new BufferedWriter(new OutputStreamWriter(out));
+                    for(Dish di:dishes)
+                    {
+                        writer.write(di.Output()+"\n");
+                    }
+
+                }catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (writer != null) {
+                                writer.close();
+                            } }catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+
+
+//                DishesDataInput i = new DishesDataInput();
+//                i.Read();
+
+//                Context context = null;
+//                //得到输入流之后
+//                FileInputStream inStream = null;
+//                try {
+//                    inStream = context.openFileInput("DishesData.txt");
+//                } catch (FileNotFoundException e) {
+//                    e.printStackTrace();
+//                }
+//                //创建一个往内存输出流对象
+//                ByteArrayOutputStream outStream =new ByteArrayOutputStream();
+//                byte[] buffer =new byte[1024];
+//                int len =0;
+//                try {
+//                    while((len=inStream.read(buffer))!=-1){
+//                        //把每次读到的数据写到内存中
+//                        outStream.write(buffer,0,len);
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                //得到存放在内存中的所有的数据
+//                byte [] data =outStream.toByteArray();
+
+
+                FileInputStream in = null;
+                BufferedReader reader = null;
+                StringBuilder content = new StringBuilder();
+                try {
+                    in = openFileInput("DishesData.txt");
+                    reader = new BufferedReader((new InputStreamReader(in)));
+                    String line = "";
+                        while ((line = reader.readLine()) != null) {
+                            content.append(line+"\n");
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }finally {
+                    if (reader != null) {
+                        try {
+                            reader.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+                Log.d("balabala",content.toString());
+
                 attemptLogin();
             }
         });
