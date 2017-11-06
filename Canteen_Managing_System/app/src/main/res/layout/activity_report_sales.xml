@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Income" />
+        android:hint="Income" />
 
     <EditText
         android:id="@+id/edit_outcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Outcome" />
+        android:hint="Outcome" />
 
 
     <Button

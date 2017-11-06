@@ -100,6 +100,8 @@ public class SideMenuActivity extends AppCompatActivity
             startActivity(intent4);
         } else if (id == R.id.nav_5) {
             //Handle View Evaluations
+            Intent intent_view_evaluations = new Intent(SideMenuActivity.this,ViewEvaluationsActivity.class);
+            startActivity(intent_view_evaluations);
         } else if (id == R.id.nav_6) {
             //Handle Logout
             Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();

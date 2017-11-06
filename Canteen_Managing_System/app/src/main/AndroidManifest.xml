@@ -36,7 +36,11 @@
         <activity android:name=".RankListActivity" />
         <activity android:name=".Order.EvaluateActivity" />
         <activity android:name=".OrderListActivity" />
-        <activity android:name=".ReportSalesActivity"></activity>
+        <activity android:name=".ReportSalesActivity" />
+        <activity
+            android:name=".ViewEvaluationsActivity"
+            android:label="@string/title_activity_view_evaluations"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
