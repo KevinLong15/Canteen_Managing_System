@@ -88,6 +88,8 @@ public class SideMenuActivity extends AppCompatActivity
             startActivity(intent3);
         } else if (id == R.id.nav_2) {
             // Handle Deal Orders
+            Intent intent_deal_order = new Intent(SideMenuActivity.this,OrderListActivity.class);
+            startActivity(intent_deal_order);
         } else if (id == R.id.nav_3) {
             // Handle Report Sales
         } else if (id == R.id.nav_4) {

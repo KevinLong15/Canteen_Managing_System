@@ -34,7 +34,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DishListActivity" />
         <activity android:name=".RankListActivity" />
-        <activity android:name=".Order.EvaluateActivity"></activity>
+        <activity android:name=".Order.EvaluateActivity" />
+        <activity android:name=".OrderListActivity"></activity>
     </application>
 
 </manifest>
