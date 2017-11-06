@@ -2,6 +2,7 @@ package alex.canteen_managing_system;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CpuUsageInfo;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -53,6 +54,11 @@ public class CustomerMainUI extends AppCompatActivity {
                 //intent to evaluate
                 Intent intent_evaluate = new Intent(CustomerMainUI.this,EvaluateActivity.class);
                 startActivity(intent_evaluate);
+                break;
+            case R.id.action_order:
+                //intent to order
+                Intent intent_order = new Intent(CustomerMainUI.this,DishListActivity.class);
+                startActivity(intent_order);
                 break;
             case R.id.action_logout:
                 Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();
