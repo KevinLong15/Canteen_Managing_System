@@ -33,7 +33,8 @@
             android:label="@string/title_activity_side_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DishListActivity" />
-        <activity android:name=".RankListActivity"></activity>
+        <activity android:name=".RankListActivity" />
+        <activity android:name=".Order.EvaluateActivity"></activity>
     </application>
 
 </manifest>

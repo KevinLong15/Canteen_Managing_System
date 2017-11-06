@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import alex.canteen_managing_system.Order.EvaluateActivity;
+
 public class CustomerMainUI extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -46,6 +48,11 @@ public class CustomerMainUI extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_settings:
                 Toast.makeText(this, "settings waited to be added", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_evaluate:
+                //intent to evaluate
+                Intent intent_evaluate = new Intent(CustomerMainUI.this,EvaluateActivity.class);
+                startActivity(intent_evaluate);
                 break;
             case R.id.action_logout:
                 Toast.makeText(this, "Log out successfully", Toast.LENGTH_SHORT).show();

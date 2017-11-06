@@ -1,9 +1,12 @@
 package alex.canteen_managing_system;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.AdapterView;
+        import android.widget.ArrayAdapter;
+        import android.widget.ListView;
+        import android.widget.Toast;
 
 public class DishListActivity extends AppCompatActivity {
 
@@ -17,5 +20,14 @@ public class DishListActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(DishListActivity.this,android.R.layout.simple_list_item_1,data);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+        /*here is some wrong to obtain the click function!!
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                     long id){
+
+                Toast.makeText(DishListActivity.this,"The Dish is XXX RMB",Toast.LENGTH_SHORT).show();
+            }
+        });*/
     }
 }
