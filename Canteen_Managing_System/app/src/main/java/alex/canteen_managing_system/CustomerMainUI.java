@@ -24,7 +24,9 @@ public class CustomerMainUI extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    //mTextMessage.setText(R.string.title_dashboard);
+                    Intent intent5 = new Intent(CustomerMainUI.this,DishListActivity.class);
+                    startActivity(intent5);
                     return true;
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
