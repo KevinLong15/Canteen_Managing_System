@@ -92,6 +92,8 @@ public class SideMenuActivity extends AppCompatActivity
             startActivity(intent_deal_order);
         } else if (id == R.id.nav_3) {
             // Handle Report Sales
+            Intent intent_report_sales = new Intent(SideMenuActivity.this,ReportSalesActivity.class);
+            startActivity(intent_report_sales);
         } else if (id == R.id.nav_4) {
             // Handle View Rank
             Intent intent4 = new Intent(SideMenuActivity.this,RankListActivity.class);
