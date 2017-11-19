@@ -1,0 +1,113 @@
+/*
+ *  http://www.appcodes.cn APP精品源码下载站声明：
+ * 1、本站源码为网上搜集或网友提供，如果涉及或侵害到您的版 权，请立即通知我们。
+ * 2、 本站提供免费代码只可供研究学习使用，切勿用于商业用途 由此引起一切后果与本站无关。
+ * 3、 商业源码请在源码授权范围内进行使用。
+ * 4、更多APP精品源码下载请访问:http://www.appcodes.cn。
+ * 5、如有疑问请发信息至appcodes@qq.com。
+ */
+package com.zsct.customer.http;
+
+import java.io.UnsupportedEncodingException;
+
+import org.apache.http.Header;
+
+import android.util.Log;
+
+/**
+ * Used to intercept and handle the responses from requests made using {@link AsyncHttpClient}. The
+ * {@link #onSuccess(int, org.apache.http.Header[], String)} method is designed to be anonymously
+ * overridden with your own response handling code. <p>&nbsp;</p> Additionally, you can override the
+ * {@link #onFailure(int, org.apache.http.Header[], String, Throwable)}, {@link #onStart()}, and
+ * {@link #onFinish()} methods as required. <p>&nbsp;</p> For example: <p>&nbsp;</p>
+ * <pre>
+ * AsyncHttpClient client = new AsyncHttpClient();
+ * client.get("http://www.google.com", new TextHttpResponseHandler() {
+ *     &#064;Override
+ *     public void onStart() {
+ *         // Initiated the request
+ *     }
+ *
+ *     &#064;Override
+ *     public void onSuccess(String responseBody) {
+ *         // Successfully got a response
+ *     }
+ *
+ *     &#064;Override
+ *     public void onFailure(String responseBody, Throwable e) {
+ *         // Response failed :(
+ *     }
+ *
+ *     &#064;Override
+ *     public void onFinish() {
+ *         // Completed the request (either success or failure)
+ *     }
+ * });
+ * </pre>
+ */
+public abstract class TextHttpResponseHandler extends AsyncHttpResponseHandler {
+    private static final String LOG_TAG = "TextHttpResponseHandler";
+
+    /**
+     * Creates new instance with default UTF-8 encoding
+     */
+    public TextHttpResponseHandler() {
+        this(DEFAULT_CHARSET);
+    }
+
+    /**
+     * Creates new instance with given string encoding
+     *
+     * @param encoding String encoding, see {@link #setCharset(String)}
+     */
+    public TextHttpResponseHandler(String encoding) {
+        super();
+        setCharset(encoding);
+    }
+
+    /**
+     * Called when request fails
+     *
+     * @param statusCode     http response status line
+     * @param headers        response headers if any
+     * @param responseString string response of given charset
+     * @param throwable      throwable returned when processing request
+     */
+    public abstract void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable);
+
+    /**
+     * Called when request succeeds
+     *
+     * @param statusCode     http response status line
+     * @param headers        response headers if any
+     * @param responseString string response of given charset
+     */
+    public abstract void onSuccess(int statusCode, Header[] headers, String responseString);
+
+    @Override
+    public void onSuccess(int statusCode, Header[] headers, byte[] responseBytes) {
+        onSuccess(statusCode, headers, getResponseString(responseBytes, getCharset()));
+    }
+
+    @Override
+    public void onFailure(int statusCode, Header[] headers, byte[] responseBytes, Throwable throwable) {
+        onFailure(statusCode, headers, getResponseString(responseBytes, getCharset()), throwable);
+    }
+
+    /**
+     * Attempts to encode response bytes as string of set encoding
+     *
+     * @param charset     charset to create string with
+     * @param stringBytes response bytes
+     * @return String of set encoding or null
+     */
+    public static String getResponseString(byte[] stringBytes, String charset) {
+        try {
+            return stringBytes == null ? null : new String(stringBytes, charset);
+        } catch (UnsupportedEncodingException e) {
+            Log.e(LOG_TAG, "Encoding response into string failed", e);
+            return null;
+        }
+    }
+
+}

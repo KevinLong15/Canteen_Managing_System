@@ -1,0 +1,237 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/headbg" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_head"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:text="@string/backward" />
+        <TextView android:id="@+id/logout"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/white"
+        android:text="注 销"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/lin1_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/bookorder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/lin2_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/menuorder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/lin3_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/dealorder" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lin4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/lin4_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/comment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/lin5_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/worker" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/null_btn_text"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/lin6_bg" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/main_itemText"
+                android:text="@string/log" />
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#d6f1f0"
+        android:gravity="center">
+   <TextView android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/red"
+       android:textSize="20sp"
+       android:layout_gravity="left"
+       android:text="@string/dealticket"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单号：" />
+
+            <EditText
+                android:id="@+id/order_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码：" />
+
+            <EditText
+                android:id="@+id/signedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+ 
+
+    <Button
+        android:id="@+id/signcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@drawable/blue_btn_text"
+        android:text="验证"
+        android:layout_gravity="right"
+        android:textColor="@color/white" />
+   </LinearLayout>
+</LinearLayout>

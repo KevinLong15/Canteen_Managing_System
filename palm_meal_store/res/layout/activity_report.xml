@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/second"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/headbg">
+       <ImageView
+                android:id="@+id/back"
+	            android:layout_width="50dp"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/arrow_left"
+	            android:padding="10dp"
+	            android:background="@drawable/null_btn_text"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/report"
+            style="@style/text_head"
+            android:layout_marginRight="50dp"
+            />
+        
+    </LinearLayout>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/report_msg" 
+       android:textSize="20sp"
+       android:layout_marginLeft="30dp"
+       android:layout_marginTop="15dp"
+       android:layout_marginBottom="15dp"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2dp" 
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#aaaaaa"
+    />
+    <EditText
+       android:id="@+id/feedback_content"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:hint="@string/report_content" 
+       android:layout_margin="20dp"
+       android:gravity="start"
+       android:background="@color/text_press"/>
+      
+       <Button
+           android:id="@+id/submit" 
+           android:layout_width="100dp"
+           android:layout_height="wrap_content"
+           android:layout_margin="20dp"
+           android:padding="10dp"
+           android:layout_gravity="right"
+           android:textColor="@color/white"
+           android:text="@string/submit"
+           android:background="@drawable/blue_btn_text"
+           />
+    
+</LinearLayout>

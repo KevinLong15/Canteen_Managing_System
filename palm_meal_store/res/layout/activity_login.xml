@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center" 
+        android:background="@color/headbg">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_head"
+            android:text="@string/login" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/text_press"
+        android:padding="20dp"
+        android:orientation="vertical">
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:text="@string/username" />
+          <!--  android:text="18105169644" -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:singleLine="true" 
+           
+            android:background="@drawable/edittext_selector"/>
+        </LinearLayout>
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:text="@string/password" />
+        <!-- android:text="123456" -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="3"
+            android:password="true"
+            android:background="@drawable/edittext_selector"/>
+        </LinearLayout>
+         </LinearLayout>
+         <Button android:id="@+id/loginbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="20dp"
+             android:paddingLeft="50dp"
+             android:paddingRight="50dp"
+             android:paddingTop="10dp"
+             android:paddingBottom="10dp"
+             android:background="@drawable/blue_btn_text"
+             android:layout_gravity="right"
+             android:textColor="@color/white"
+             android:text="@string/login"
+             />
+         <TextView android:id="@+id/forgetword"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="20dp"
+             android:padding="10dp"
+             android:layout_gravity="right"
+             android:textColor="@color/text_blue"
+             android:text="@string/forgetword"
+             />
+</LinearLayout>

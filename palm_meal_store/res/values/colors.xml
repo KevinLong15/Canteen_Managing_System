@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#666600</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#999999</color>
+    <color name="black">#000000</color>
+    <color name="skyblue">#66CCFF</color>
+    <color name="orange">#FF6600</color> 
+    <color name="orange_press">#CD6839</color> 
+    <color name="tab_bg">#323232</color>
+    <color name="transparent">#0000</color>
+    <color name="divider">#ffd8d8d8</color>
+    <color name="backColor">#2000</color>
+    <color name="headbg">#1197a6</color> 
+    <color name="text_normal">#cdcdcd</color>
+    <color name="text_press">#9d9c9c</color>
+    <color name="text_blue">#1398a7</color>
+    <color name="textcolor_normal">#696969</color>
+    <color name="textcolor_select">#14a19c</color>
+</resources>
