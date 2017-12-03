@@ -76,7 +76,6 @@ public class PersonSettingActivity extends BaseActivity implements OnClickListen
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_person_setting);
-		personAboutus = (LinearLayout) findViewById(R.id.personaboutus);
 		personClean = (LinearLayout) findViewById(R.id.personClean);
 		personFeedback = (LinearLayout) findViewById(R.id.personmainLogout);
 		personProtocol = (LinearLayout) findViewById(R.id.setting_feedback);
@@ -96,11 +95,6 @@ public class PersonSettingActivity extends BaseActivity implements OnClickListen
 		switch (v.getId()) {
 		case R.id.back:
 			onBackPressed();
-			break;
-		case R.id.personaboutus:
-			Intent mIntent=new Intent(this, AboutUsActivity.class);
-			mIntent.putExtra(JsonUtil.CODE, JsonUtil.ABOUTUS);
-			startActivity(mIntent);
 			break;
 		case R.id.personClean:
 			final AlertDialog.Builder builder=new AlertDialog.Builder(this);

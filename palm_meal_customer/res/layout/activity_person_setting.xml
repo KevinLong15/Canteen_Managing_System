@@ -42,37 +42,6 @@
         android:layout_marginRight="10dp"
         android:background="#aaaaaa" />
 
-    <LinearLayout
-        android:id="@+id/personaboutus"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingEnd="20dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingStart="20dp" >
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:contentDescription="@string/system_image_logo"
-            android:src="@drawable/aboutus" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="@string/person_setting_text_aboutus" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/person_main_image_shop"
-            android:src="@drawable/arrow_right" />
-    </LinearLayout>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="0.4dp"
